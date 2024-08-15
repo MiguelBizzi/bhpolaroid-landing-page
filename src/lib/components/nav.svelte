@@ -37,9 +37,12 @@
 	<span class="cursor-pointer px-1 text-sm font-medium leading-none text-white hover:underline">
 		Quem somos
 	</span>
-	<span class="cursor-pointer px-1 text-sm font-medium leading-none text-white hover:underline">
+	<a
+		href="#testimonials"
+		class="cursor-pointer px-1 text-sm font-medium leading-none text-white hover:underline"
+	>
 		Avaliações
-	</span>
+	</a>
 	<span class="cursor-pointer px-1 text-sm font-medium leading-none text-white hover:underline">
 		Contato
 	</span>

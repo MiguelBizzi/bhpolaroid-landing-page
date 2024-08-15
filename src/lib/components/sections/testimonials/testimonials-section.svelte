@@ -2,7 +2,7 @@
 	import TestimonialsCard from './testimonials-card.svelte';
 </script>
 
-<div class="mx-auto mt-4 max-w-screen-xl p-6">
+<div class="mx-auto mt-4 max-w-screen-xl p-6" id="testimonials">
 	<div class="text-center">
 		<h1 class="text-lg font-bold text-primary">Avaliações</h1>
 		<h2 class="mx-auto max-w-xl text-4xl font-semibold">
