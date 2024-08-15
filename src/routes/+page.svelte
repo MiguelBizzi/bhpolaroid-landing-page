@@ -1,8 +1,9 @@
 <script lang="ts">
-	import Button from "$lib/components/ui/button/button.svelte";
+	import TestimonialsSection from '$lib/components/sections/testimonials/testimonials-section.svelte';
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<div class="flex h-[300px] items-center justify-center bg-gray-100">
+	<h1>Banner</h1>
+</div>
 
-<Button>Hello</Button>
+<TestimonialsSection />
