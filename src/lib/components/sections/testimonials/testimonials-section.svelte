@@ -10,13 +10,17 @@
 		</h2>
 	</div>
 
-	<div class="mt-14 flex items-start gap-6">
-		<div class="flex-1 space-y-6">
+	<div class="mt-14 grid w-full max-w-screen-xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+		<div class="space-y-6">
 			<TestimonialsCard />
 			<TestimonialsCard />
 			<TestimonialsCard />
+
+			<div class="block lg:hidden">
+				<TestimonialsCard />
+			</div>
 		</div>
-		<div class="flex-1 space-y-6">
+		<div class="space-y-6">
 			<TestimonialsCard
 				text="“Excepteur consectetur deserunt id incididunt veniam mollit officia sint qui aute duis sit
                 cillum. Reprehenderit fugiat amet aliqua in commodo minim sunt laborum.” “Excepteur
@@ -29,8 +33,12 @@
                 consectetur deserunt id incididunt veniam mollit officia sint qui aute duis sit cillum.
                 Reprehenderit fugiat amet aliqua in commodo minim sunt laborum.”"
 			/>
+
+			<div class="block lg:hidden">
+				<TestimonialsCard />
+			</div>
 		</div>
-		<div class="flex-1 space-y-6">
+		<div class="hidden space-y-6 lg:block">
 			<TestimonialsCard />
 			<TestimonialsCard
 				text="“Excepteur consectetur deserunt id incididunt veniam mollit officia sint qui aute duis sit

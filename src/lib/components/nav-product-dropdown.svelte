@@ -17,12 +17,12 @@
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
 	<!-- svelte-ignore a11y-mouse-events-have-key-events -->
 	<div
-		class={'absolute left-0 right-0 top-[70px] bg-red-600 p-4'}
+		class="absolute left-0 right-0 top-[70px] bg-red-600 p-4"
 		transition:slide={{ duration: 100 }}
 		on:mouseenter={handleMouseEnter}
 		on:mouseleave={handleMouseLeave}
 	>
-		<div class="grid grid-cols-4">
+		<div class="mx-auto grid max-w-screen-xl grid-cols-4">
 			<div>
 				<h2 class="font-bold text-white">Fotos</h2>
 				<nav class="flex flex-col text-white">
