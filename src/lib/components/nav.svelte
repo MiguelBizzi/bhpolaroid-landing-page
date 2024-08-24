@@ -2,8 +2,7 @@
 	import { ChevronDown } from 'lucide-svelte';
 	import NavProductDropdown from './nav-product-dropdown.svelte';
 	import { writable, type Writable } from 'svelte/store';
-	import { cn } from '$lib/utils';
-	import { fade, slide } from 'svelte/transition';
+	import { slide } from 'svelte/transition';
 
 	let isHovered: Writable<boolean> = writable(false);
 
@@ -16,7 +15,7 @@
 	}
 </script>
 
-<nav class="flex h-full select-none items-center gap-6">
+<nav class="hidden h-full select-none items-center gap-6 sm:flex">
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
 	<!-- svelte-ignore a11y-mouse-events-have-key-events -->
 	<div
