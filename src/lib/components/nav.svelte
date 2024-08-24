@@ -25,10 +25,10 @@
 		on:mouseleave={handleMouseLeave}
 		class="relative flex h-full items-center justify-center px-1"
 	>
-		<span class="cursor-pointer text-sm font-medium leading-none text-white">
+		<a href="#products" class="cursor-pointer text-sm font-medium leading-none text-white">
 			Produtos
 			<ChevronDown class="-mt-0.5 inline-flex size-4" />
-		</span>
+		</a>
 
 		{#if $isHovered}
 			<div class="absolute bottom-0 h-0.5 w-full bg-white" transition:slide />

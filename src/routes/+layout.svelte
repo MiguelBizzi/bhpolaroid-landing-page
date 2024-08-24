@@ -4,18 +4,17 @@
 	import MobileSidebar from '$lib/components/mobile-sidebar.svelte';
 	import TopBanner from '$lib/components/top-banner.svelte';
 	import CartSidebar from '$lib/components/cart-sidebar.svelte';
-	import { cart } from '$lib/stores/cart-store';
+	import { cart, CartStorageEnum } from '$lib/stores/cart-store';
 	import { browser } from '$app/environment';
 	import SearchCommand from '$lib/components/search-command.svelte';
 
 	function loadPersistedCart() {
-		const storedCart = localStorage.getItem('cart');
+		const storedCart = localStorage.getItem(CartStorageEnum.Cart);
+
 		$cart = storedCart ? JSON.parse(storedCart) : [];
 	}
 
-	$: if (browser) {
-		loadPersistedCart();
-	}
+	$: browser && loadPersistedCart();
 </script>
 
 <TopBanner />

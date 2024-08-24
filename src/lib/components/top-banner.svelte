@@ -27,7 +27,7 @@
 			Compre já nossas fotos!</span
 		>
 		<a
-			href="#"
+			href="#products"
 			class=" ml-4 flex-none rounded-full bg-red-600 px-3.5 py-1 text-sm font-semibold text-white shadow-sm transition-colors duration-150 hover:bg-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-900"
 			>Comprar <span aria-hidden="true">&rarr;</span></a
 		>

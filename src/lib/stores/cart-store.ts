@@ -1,26 +1,54 @@
+import { browser } from '$app/environment';
+import type { Product } from '$lib/constants/products';
 import { writable } from 'svelte/store';
 
-export const cart = writable([]);
+export interface CartProduct extends Product {
+	quantity: number;
+}
 
-export const addToCart = (product) => {
-    cart.update((items) => {
-        const existingItem = items.find(item => item.id === product.id);
-        if (existingItem) {
-            return items.map(item =>
-                item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-            );
-        } else {
-            return [...items, { ...product, quantity: 1 }];
-        }
-    });
+export enum CartStorageEnum {
+	Cart = 'BhPolaroid:Cart'
+}
+
+export const cart = writable<CartProduct[]>([]);
+
+export const addToCart = (product: Product) => {
+	cart.update((items) => {
+		const existingItem = items.find((item) => item.name === product.name);
+		let updatedCart: CartProduct[];
+
+		if (existingItem) {
+			updatedCart = items.map((item) =>
+				item.name === product.name ? { ...item, quantity: item.quantity + 1 } : item
+			);
+		} else {
+			updatedCart = [...items, { ...product, quantity: product?.minimum ?? 1 }];
+		}
+
+		if (browser) {
+			localStorage.setItem(CartStorageEnum.Cart, JSON.stringify(updatedCart));
+		}
+
+		return updatedCart;
+	});
 };
 
-export const removeFromCart = (productId) => {
-    cart.update((items) => {
-        return items.filter(item => item.id !== productId);
-    });
+export const removeFromCart = (productName: string) => {
+	cart.update((items) => {
+		const updatedCart = items.filter((item) => item.name !== productName);
+
+		if (browser) {
+			localStorage.setItem(CartStorageEnum.Cart, JSON.stringify(updatedCart));
+		}
+
+		return updatedCart;
+	});
 };
 
 export const clearCart = () => {
-    cart.set([]);
+	cart.set([]);
+
+	if (browser) {
+		localStorage.removeItem(CartStorageEnum.Cart);
+	}
 };
