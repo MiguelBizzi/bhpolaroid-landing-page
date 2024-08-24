@@ -26,7 +26,7 @@
 				</h3>
 				<p class="ml-4">{formatCurrency(product.price * product.quantity)}</p>
 			</div>
-			<p class="mt-1 text-sm text-gray-500">{product.price}/u</p>
+			<p class="mt-1 text-sm text-gray-500">{formatCurrency(product.price)}/u</p>
 		</div>
 		<div class="flex flex-1 items-end justify-between text-sm">
 			<p class="text-gray-500">Qtd {product.quantity}</p>
