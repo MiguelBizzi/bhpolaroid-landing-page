@@ -4,7 +4,7 @@
 	import MobileSidebar from '$lib/components/mobile-sidebar.svelte';
 	import TopBanner from '$lib/components/top-banner.svelte';
 	import CartSidebar from '$lib/components/cart-sidebar.svelte';
-	import { cart } from '$lib/stores/cartStore';
+	import { cart } from '$lib/stores/cart-store';
 	import { browser } from '$app/environment';
 	import SearchCommand from '$lib/components/search-command.svelte';
 
