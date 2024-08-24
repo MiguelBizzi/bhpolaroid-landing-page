@@ -10,7 +10,7 @@
 	<Sheet.Trigger>
 		<Menu class="size-6 text-white" />
 	</Sheet.Trigger>
-	<Sheet.Content side="right">
+	<Sheet.Content side="left">
 		<div class="space-y-4">
 			<div>
 				<button

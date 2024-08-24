@@ -3,6 +3,8 @@
 	import NavProductDropdown from './nav-product-dropdown.svelte';
 	import { writable, type Writable } from 'svelte/store';
 	import { slide } from 'svelte/transition';
+	import CartSidebar from './cart-sidebar.svelte';
+	import SearchCommand from './search-command.svelte';
 
 	let isHovered: Writable<boolean> = writable(false);
 
@@ -15,7 +17,7 @@
 	}
 </script>
 
-<nav class="hidden h-full select-none items-center gap-6 sm:flex">
+<nav class="hidden h-full select-none items-center gap-6 sm:ml-0 sm:flex">
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
 	<!-- svelte-ignore a11y-mouse-events-have-key-events -->
 	<div
@@ -45,6 +47,10 @@
 	<span class="cursor-pointer px-1 text-sm font-medium leading-none text-white hover:underline">
 		Contato
 	</span>
+
+	<SearchCommand />
+
+	<CartSidebar />
 </nav>
 
 <NavProductDropdown {isHovered} />
