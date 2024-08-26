@@ -2,6 +2,7 @@
 	import Button from '$lib/components/ui/button/button.svelte';
 	import type { Product } from '$lib/constants/products';
 	import { addToCart } from '$lib/stores/cart-store';
+	import { cn } from '$lib/utils';
 	import { formatCurrency } from '$lib/utils/format-currency';
 
 	export let product: Product;
@@ -21,7 +22,12 @@
 			class="h-full w-full object-cover object-center transition-transform duration-150 group-hover:scale-110 lg:h-full lg:w-full"
 		/>
 	</div>
-	<div class="mt-4 flex items-start justify-between">
+	<div
+		class={cn('mt-4 flex items-start justify-between', {
+			'my-4': !product.minimum,
+			'mt-4': product.minimum
+		})}
+	>
 		<div>
 			<h3 class="font-bold leading-none text-gray-700">{product.name}</h3>
 		</div>

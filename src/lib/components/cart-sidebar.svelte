@@ -25,7 +25,7 @@
 			</div>
 		{/if}
 	</Sheet.Trigger>
-	<Sheet.Content class="flex flex-col" side="right">
+	<Sheet.Content class="flex w-10/12 flex-col sm:max-w-md" side="right">
 		<Sheet.Header>
 			<Sheet.Title>Carrinho</Sheet.Title>
 			<Sheet.Description>Veja os produtos que você adicionou ao carrinho.</Sheet.Description>
