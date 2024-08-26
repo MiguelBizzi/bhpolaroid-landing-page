@@ -1,5 +1,6 @@
 import { browser } from '$app/environment';
 import type { Product } from '$lib/constants/products';
+import { toast } from 'svelte-sonner';
 import { writable } from 'svelte/store';
 
 export interface CartProduct extends Product {
@@ -11,6 +12,7 @@ export enum CartStorageEnum {
 }
 
 export const cart = writable<CartProduct[]>([]);
+export const cartSidebarOpen = writable<boolean>(false);
 
 export const addToCart = (product: Product) => {
 	cart.update((items) => {
@@ -28,6 +30,10 @@ export const addToCart = (product: Product) => {
 		if (browser) {
 			localStorage.setItem(CartStorageEnum.Cart, JSON.stringify(updatedCart));
 		}
+
+		cartSidebarOpen.set(true);
+
+		toast.success('Produto adicionado ao carrinho!');
 
 		return updatedCart;
 	});

@@ -1,15 +1,19 @@
 <script lang="ts">
 	import { ShoppingCart } from 'lucide-svelte';
 	import * as Sheet from '$lib/components/ui/sheet/index.js';
-	import { cart } from '$lib/stores/cart-store';
+	import { cart, cartSidebarOpen } from '$lib/stores/cart-store';
 	import CartProduct from './cart-product.svelte';
 	import Button from './ui/button/button.svelte';
 	import { ScrollArea } from '$lib/components/ui/scroll-area/index.js';
 
-	let open: boolean;
+	function handleCartOpen(value: boolean) {
+		if (value !== $cartSidebarOpen) {
+			$cartSidebarOpen = value;
+		}
+	}
 </script>
 
-<Sheet.Root bind:open>
+<Sheet.Root open={$cartSidebarOpen} onOpenChange={handleCartOpen}>
 	<Sheet.Trigger class="relative">
 		<ShoppingCart class="size-5 text-white" />
 

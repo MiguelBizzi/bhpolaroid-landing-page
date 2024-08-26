@@ -7,6 +7,7 @@
 	import { cart, CartStorageEnum } from '$lib/stores/cart-store';
 	import { browser } from '$app/environment';
 	import SearchCommand from '$lib/components/search-command.svelte';
+	import { Toaster } from '$lib/components/ui/sonner';
 
 	function loadPersistedCart() {
 		const storedCart = localStorage.getItem(CartStorageEnum.Cart);
@@ -38,3 +39,5 @@
 </header>
 
 <slot></slot>
+
+<Toaster theme="light" />

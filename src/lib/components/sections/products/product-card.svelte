@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Button from '$lib/components/ui/button/button.svelte';
 	import type { Product } from '$lib/constants/products';
-	import { addToCart, cart } from '$lib/stores/cart-store';
+	import { addToCart } from '$lib/stores/cart-store';
 	import { formatCurrency } from '$lib/utils/format-currency';
 
 	export let product: Product;
