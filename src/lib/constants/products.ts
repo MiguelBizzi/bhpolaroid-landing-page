@@ -124,3 +124,17 @@ export const products: Product[] = [
 		price: 20.0
 	}
 ];
+
+export const polaroid_products: Product[] = products
+	.filter((product) => product.name.includes('Polaroid') && !product.name.includes('Mini Polaroid'))
+	.slice(0, 4);
+
+export const mini_polaroid_products: Product[] = products
+	.filter((product) => product.name.includes('Mini Polaroid'))
+	.slice(0, 4);
+
+export const other_products: Product[] = products
+	.filter(
+		(product) => !product.name.includes('Polaroid') && !product.name.includes('Mini Polaroid')
+	)
+	.slice(0, 4);

@@ -35,9 +35,12 @@
 		{/if}
 	</div>
 
-	<span class="cursor-pointer px-1 text-sm font-medium leading-none text-white hover:underline">
+	<a
+		href="#about-us"
+		class="cursor-pointer px-1 text-sm font-medium leading-none text-white hover:underline"
+	>
 		Quem somos
-	</span>
+	</a>
 	<a
 		href="#testimonials"
 		class="cursor-pointer px-1 text-sm font-medium leading-none text-white hover:underline"
