@@ -3,11 +3,13 @@
 	import ProductCard from '$lib/components/sections/products/product-card.svelte';
 	import { Search } from 'lucide-svelte';
 	import Input from '$lib/components/ui/input/input.svelte';
+	import { queryParam } from 'sveltekit-search-params';
+	import { formatStringUnaccent } from '$lib/utils/format-string-unaccent';
 
-	let filterValue = '';
+	let filterValue = queryParam('search');
 
 	$: filteredProducts = products.filter((product) =>
-		product.name.toLowerCase().includes(filterValue.toLowerCase())
+		formatStringUnaccent(product.name).includes(formatStringUnaccent($filterValue ?? ''))
 	);
 </script>
 
@@ -24,9 +26,13 @@
 			class="max-w-md pl-8"
 			placeholder="Pesquisar..."
 			type="text"
-			bind:value={filterValue}
+			bind:value={$filterValue}
 		/>
 	</div>
+
+	{#if filteredProducts.length === 0}
+		<p class="mt-8 text-gray-500">Nenhum produto encontrado.</p>
+	{/if}
 
 	<div class="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
 		{#each filteredProducts as product}

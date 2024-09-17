@@ -425,6 +425,19 @@
     svelte-hmr "^0.16.0"
     vitefu "^0.2.5"
 
+"@sveltejs/vite-plugin-svelte@^3.0.2":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@sveltejs/vite-plugin-svelte/-/vite-plugin-svelte-3.1.2.tgz#be3120b52e6d9facb55d58392b0dad9e5a35ba6f"
+  integrity sha512-Txsm1tJvtiYeLUVRNqxZGKR/mI+CzuIQuc2gn+YCs9rMTowpNZ2Nqt53JdL8KF9bLhAf2ruR/dr9eZCwdTriRA==
+  dependencies:
+    "@sveltejs/vite-plugin-svelte-inspector" "^2.1.0"
+    debug "^4.3.4"
+    deepmerge "^4.3.1"
+    kleur "^4.1.5"
+    magic-string "^0.30.10"
+    svelte-hmr "^0.16.0"
+    vitefu "^0.2.5"
+
 "@swc/helpers@^0.5.0":
   version "0.5.12"
   resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.5.12.tgz#37aaca95284019eb5d2207101249435659709f4b"
@@ -2092,6 +2105,13 @@ svelte@^4.2.7:
     locate-character "^3.0.0"
     magic-string "^0.30.4"
     periscopic "^3.1.0"
+
+sveltekit-search-params@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/sveltekit-search-params/-/sveltekit-search-params-3.0.0.tgz#6e166185196204ae190ee757d9f13c4a2ac697df"
+  integrity sha512-wq1Yo5zITev8ty9CWGmHgvAh+Xb3mCUewyUmvCdv6MJWi+/aZ4o79Y6SjuduDL0Cfd/KYHkqt4f/wQ4FtokSdw==
+  dependencies:
+    "@sveltejs/vite-plugin-svelte" "^3.0.2"
 
 tabbable@^6.2.0:
   version "6.2.0"

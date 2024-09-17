@@ -11,6 +11,17 @@
 			$cartSidebarOpen = value;
 		}
 	}
+
+	function handleFinishCart() {
+		const message = $cart
+			.map((product) => `Qtd: ${product.quantity} - ${product.name} - R$ ${product.price}`)
+			.join('\n');
+		const url = `https://api.whatsapp.com/send?phone=5531995904648&text=${encodeURIComponent(message)}`;
+
+		window.open(url, '_blank');
+		$cart = [];
+		$cartSidebarOpen = false;
+	}
 </script>
 
 <Sheet.Root open={$cartSidebarOpen} onOpenChange={handleCartOpen}>
@@ -46,7 +57,7 @@
 		{#if $cart.length > 0}
 			<Sheet.Footer>
 				<Sheet.Close asChild let:builder>
-					<Button builders={[builder]}>Finalizar compra</Button>
+					<Button builders={[builder]} on:click={handleFinishCart}>Finalizar compra</Button>
 				</Sheet.Close>
 			</Sheet.Footer>
 		{/if}
