@@ -1,9 +1,6 @@
 <script lang="ts">
 	import AboutUsSection from '$lib/components/sections/about-us/about-us-section.svelte';
-	import ContactSection from '$lib/components/sections/contact/contact-section.svelte';
-	import Footer from '$lib/components/sections/footer/footer.svelte';
 	import ProductSection from '$lib/components/sections/products/product-section.svelte';
-	import TestimonialsSection from '$lib/components/sections/testimonials/testimonials-section.svelte';
 	import ValuesSection from '$lib/components/sections/values/values-section.svelte';
 	import {
 		mini_polaroid_products,
@@ -12,7 +9,7 @@
 	} from '$lib/constants/products';
 </script>
 
-<div class="mx-auto flex h-[300px] max-w-screen-xl items-center justify-center bg-gray-100">
+<div class="mx-auto flex h-[350px] max-w-screen-xl items-center justify-center bg-gray-100">
 	<h1>Banner</h1>
 </div>
 
@@ -37,9 +34,3 @@
 	description="Tudo o que você precisa para ler, criar e se inspirar!"
 	products={other_products}
 />
-
-<TestimonialsSection />
-
-<ContactSection />
-
-<Footer />

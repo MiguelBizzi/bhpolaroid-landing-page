@@ -1,5 +1,7 @@
 <script lang="ts">
+	import Button from '$lib/components/ui/button/button.svelte';
 	import type { Product } from '$lib/constants/products';
+	import { ChevronRight } from 'lucide-svelte';
 	import ProductCard from './product-card.svelte';
 
 	export let title: string;
@@ -17,5 +19,11 @@
 		{#each products as product}
 			<ProductCard {product} />
 		{/each}
+	</div>
+
+	<div class="flex items-center justify-center">
+		<Button href="/products" variant="outline" class="mt-8"
+			>Ver todos os produtos <ChevronRight class="ml-2 size-4 text-accent-foreground" /></Button
+		>
 	</div>
 </div>

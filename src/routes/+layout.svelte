@@ -8,6 +8,9 @@
 	import { browser } from '$app/environment';
 	import SearchCommand from '$lib/components/search-command.svelte';
 	import { Toaster } from '$lib/components/ui/sonner';
+	import ContactSection from '$lib/components/sections/contact/contact-section.svelte';
+	import Footer from '$lib/components/sections/footer/footer.svelte';
+	import TestimonialsSection from '$lib/components/sections/testimonials/testimonials-section.svelte';
 
 	function loadPersistedCart() {
 		const storedCart = localStorage.getItem(CartStorageEnum.Cart);
@@ -39,5 +42,11 @@
 </header>
 
 <slot></slot>
+
+<TestimonialsSection />
+
+<ContactSection />
+
+<Footer />
 
 <Toaster theme="light" />
