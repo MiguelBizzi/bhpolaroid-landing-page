@@ -20,7 +20,7 @@
 <nav class="hidden h-full select-none items-center gap-6 sm:ml-0 sm:flex">
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
 	<!-- svelte-ignore a11y-mouse-events-have-key-events -->
-	<div
+	<!-- <div
 		on:mouseenter={handleMouseEnter}
 		on:mouseleave={handleMouseLeave}
 		class="relative flex h-full items-center justify-center px-1"
@@ -33,7 +33,13 @@
 		{#if $isHovered}
 			<div class="absolute bottom-0 h-0.5 w-full bg-white" transition:slide />
 		{/if}
-	</div>
+	</div> -->
+	<a
+		href="#products"
+		class="cursor-pointer px-1 text-sm font-medium leading-none text-white hover:underline"
+	>
+		Produtos
+	</a>
 
 	<a
 		href="#about-us"
@@ -56,4 +62,4 @@
 	<CartSidebar />
 </nav>
 
-<NavProductDropdown {isHovered} />
+<!-- <NavProductDropdown {isHovered} /> -->
