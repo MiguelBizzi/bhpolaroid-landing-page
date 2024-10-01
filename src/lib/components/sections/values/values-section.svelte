@@ -4,7 +4,7 @@
 </script>
 
 <div class="mx-auto mt-4 max-w-screen-xl p-6" id="values">
-	<div class="flex items-center gap-4">
+	<div class="flex flex-col items-center gap-4 sm:flex-row">
 		<Card.Root class="flex-1 text-center">
 			<Card.Header class="pb-2">
 				<Sparkles class="mb-2 size-8 self-center text-primary" />

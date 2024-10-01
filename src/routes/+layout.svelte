@@ -29,12 +29,14 @@
 			<MobileSidebar />
 		</div>
 
-		<img src="/logo-header.png" alt="logo" class="w-[140px] object-fill object-center" />
+		<a href="/">
+			<img src="/logo-header.png" alt="logo" class="w-[140px] object-fill object-center" />
+		</a>
 
 		<Nav />
 
 		<div class="ml-auto flex items-center justify-center gap-6 sm:hidden">
-			<SearchCommand />
+			<!-- <SearchCommand /> -->
 
 			<CartSidebar />
 		</div>

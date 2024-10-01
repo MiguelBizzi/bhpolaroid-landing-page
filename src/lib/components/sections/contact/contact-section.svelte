@@ -6,7 +6,7 @@
 	let instagramUrl = 'https://www.instagram.com/bhpolaroids/';
 </script>
 
-<div class="mx-auto mt-4 max-w-screen-xl p-6" id="products">
+<div class="mx-auto mt-4 max-w-screen-xl p-6" id="contact">
 	<div class="text-center">
 		<h1 class="text-lg font-bold text-primary">Contato</h1>
 		<h2 class="mx-auto mb-4 max-w-2xl text-4xl font-semibold">

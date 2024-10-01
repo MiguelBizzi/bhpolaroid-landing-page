@@ -5,12 +5,23 @@
 	import Input from '$lib/components/ui/input/input.svelte';
 	import { queryParam } from 'sveltekit-search-params';
 	import { formatStringUnaccent } from '$lib/utils/format-string-unaccent';
+	import { onMount } from 'svelte';
 
 	let filterValue = queryParam('search');
+
+	function goTop() {
+		document.body.scrollIntoView();
+	}
 
 	$: filteredProducts = products.filter((product) =>
 		formatStringUnaccent(product.name).includes(formatStringUnaccent($filterValue ?? ''))
 	);
+
+	onMount(() => {
+		setTimeout(() => {
+			goTop();
+		}, 200);
+	});
 </script>
 
 <div class="mx-auto mt-4 max-w-screen-xl p-6" id="products">
@@ -34,7 +45,9 @@
 		<p class="mt-8 text-gray-500">Nenhum produto encontrado.</p>
 	{/if}
 
-	<div class="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+	<div
+		class="mt-8 grid grid-cols-2 gap-x-4 gap-y-10 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
+	>
 		{#each filteredProducts as product}
 			<ProductCard {product} />
 		{/each}

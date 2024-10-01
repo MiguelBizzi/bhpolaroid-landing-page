@@ -23,7 +23,7 @@
 		/>
 	</div>
 	<div
-		class={cn('mt-4 flex items-start justify-between', {
+		class={cn('mt-4 flex flex-col items-start justify-between gap-1 sm:flex-row sm:gap-0', {
 			'my-4': !product.minimum,
 			'mt-4': product.minimum
 		})}
@@ -37,6 +37,8 @@
 		<p class="mb-4 mt-1 text-sm text-gray-500">Mínimo: {product.minimum} unidades</p>
 	{/if}
 	<div class="mt-auto">
-		<Button class="w-full rounded-full" on:click={handleAddToCart}>Adicionar ao carrinho</Button>
+		<Button class="w-full rounded-full text-xs sm:text-sm" on:click={handleAddToCart}
+			>Adicionar ao carrinho</Button
+		>
 	</div>
 </div>

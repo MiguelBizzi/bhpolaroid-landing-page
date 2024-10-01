@@ -7,10 +7,15 @@
 		other_products,
 		polaroid_products
 	} from '$lib/constants/products';
+	import { AspectRatio } from '$lib/components/ui/aspect-ratio';
 </script>
 
-<div class="mx-auto flex h-[350px] max-w-screen-xl items-center justify-center bg-gray-100">
-	<h1>Banner</h1>
+<div class="mx-auto w-full max-w-screen-2xl">
+	<AspectRatio ratio={10 / 4}>
+		<div class="h-full bg-gray-100 text-center">
+			<h1>Banner</h1>
+		</div>
+	</AspectRatio>
 </div>
 
 <AboutUsSection />
